@@ -23,6 +23,8 @@ db.sqlite3-journal
 .DS_Store
 
 .vscode
+.history
+
 
 # C extensions
 *.so
