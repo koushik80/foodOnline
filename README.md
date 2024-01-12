@@ -63,3 +63,30 @@
 
 ---
 
+<h4 align="left">Collecting data from static: :green_book:</h4>
+
+<ul>
+<li>python manage.py collectstatic</li>
+</ul>
+
+<h4 align="left">Create Django model: :green_book:</h4>
+<ul>
+<li>python manage.py createsuperuser</li>
+</ul>
+
+<h4 align="left">Migrate Django models: :arrows_clockwise:</h4>
+<ul>
+<li>python manage.py makemigrations</li>
+<li>python manage.py migrate</li>
+</ul>
+
+<p align="left">By default, the project runs with DEBUG=True.</p>
+
+<h4 align="left">Should be able to run and test the project locally: :man_technologist:</h4>
+<ul>
+<li>python manage.py runserver</li>
+<li>python manage.py test</li>
+</ul>
+<p align="left">The server should be running on localhost: 8000</p>
+
+---
