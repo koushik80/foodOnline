@@ -1,6 +1,6 @@
 # Hi there<img src="https://media.giphy.com/media/l4S95aLS28TNZDlzbX/giphy.gif" width="50" height="50"/>! Here goes below my Project information
 
-<h4 align="left">Underdevelopment</h4>
+<h4 align="left">Underdevelopment...</h4>
 
 
 ---
@@ -22,7 +22,7 @@
 <li>Git</li>
 <li>GitHub</li>
 <li>VS Code</li>
-<li></li>
+<li>HTML</li>
 <li></li>
 <li></li>
 <li></li>
