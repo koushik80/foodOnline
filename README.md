@@ -53,6 +53,8 @@
 <li>python -m pip install --upgrade pip</li>
 <li>pip install django</li>
 <li>django-admin startproject foodOnline_main .</li>
+<li>pip install psycopg2</li>
+<li>pip install python-decouple</li>
 <li>pip freeze > requirements.txt</li>
 <li></li>
 <li></li>
@@ -90,3 +92,10 @@
 <p align="left">The server should be running on localhost: 8000</p>
 
 ---
+
+<h3 align="left">References: :information_source: </h3>
+
+[django](https://docs.djangoproject.com/en/5.0/) <br />
+[python-decouple 3.8](https://pypi.org/project/python-decouple/) <br />
+[]() <br />
+[]() <br />
