@@ -65,6 +65,12 @@
 
 ---
 
+<h4 align="left">Creating an app:</h4>
+
+<ul>
+<li>python manage.py startapp app_name</li>
+</ul>
+
 <h4 align="left">Collecting data from static: :green_book:</h4>
 
 <ul>
