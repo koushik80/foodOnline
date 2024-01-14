@@ -55,12 +55,13 @@
 <li>django-admin startproject foodOnline_main .</li>
 <li>pip install psycopg2</li>
 <li>pip install python-decouple</li>
+<li>pip install pillow</li>
+<li>pip install numpy</li>
+<li>pip install GDAL</li>
+<li>pip install GEOS</li>
 <li>pip freeze > requirements.txt</li>
 <li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
+
 </ul>
 
 ---
