@@ -2,8 +2,8 @@ from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
 from django.db.models.fields.related import ForeignKey, OneToOneField
 
-#from django.contrib.gis.db import models as gismodels
-#from django.contrib.gis.geos import Point
+# from django.contrib.gis.db import models as gismodels
+# from django.contrib.gis.geos import Point
 
 # Created models here.
 class UserManager(BaseUserManager):
@@ -104,5 +104,8 @@ class UserProfile(models.Model):
 
     def __str__(self):
         return self.user.email
+
+
+
 
 

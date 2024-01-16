@@ -104,5 +104,6 @@
 
 [django](https://docs.djangoproject.com/en/5.0/) <br />
 [python-decouple 3.8](https://pypi.org/project/python-decouple/) <br />
+[Django Signals](https://docs.djangoproject.com/en/5.0/topics/signals/) <br />
 []() <br />
 []() <br />
