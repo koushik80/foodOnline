@@ -8,7 +8,6 @@ from .models import User
 
 def registerUser(request):
     if request.method == 'POST':
-        print(request.POST)
         form = UserForm(request.POST)
         if form.is_valid():
             # create the user using the form
@@ -17,6 +16,7 @@ def registerUser(request):
             # user.set_password(password)
             # user.role = User.CUSTOMER
             # user.save()
+
             # create the user using create_user method
             first_name = form.cleaned_data['first_name']
             last_name = form.cleaned_data['last_name']
@@ -26,8 +26,10 @@ def registerUser(request):
             user = User.objects.create_user(first_name=first_name, last_name=last_name, username=username, email=email, password=password)
             user.role = User.CUSTOMER
             user.save()
-            print('User is created')
             return redirect('registerUser')
+        else:
+            print('invalid form')
+            print(form.errors)
     else:
         form = UserForm()
     context = {
