@@ -23,7 +23,7 @@
 <li>GitHub</li>
 <li>VS Code</li>
 <li>HTML</li>
-<li></li>
+<li>CSS</li>
 <li></li>
 <li></li>
 <li></li>
