@@ -19,12 +19,11 @@
 <ul>
 <li>Python: Django</li>
 <li>PostgreSQL</li>
-<li>Git</li>
 <li>GitHub</li>
 <li>VS Code</li>
 <li>HTML</li>
 <li>CSS</li>
-<li></li>
+<li>JavaScript</li>
 <li></li>
 <li></li>
 </ul>
@@ -42,7 +41,7 @@
 ---
 
 <h3 align="left">Instruction: :pager:</h3>
-<p align="left">This is the guide on how to setup, run and deploy ßLIZZARD back-end server.To install run...</p>
+<p align="left">This is the guide on how to setup, run and deploy foodOnline back-end server.To install run...</p>
 <ul>
 <li>pip install virtualenv</li>
 <li>python -m venv env</li>
