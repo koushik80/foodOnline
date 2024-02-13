@@ -10,7 +10,10 @@ from django.contrib import messages, auth
 # Created views here
 
 def registerUser(request):
-    if request.method == 'POST':
+    if request.user.is_authenticated:
+        messages.warning(request, 'You are already logged in!')
+        return redirect('dashboard')
+    elif request.method == 'POST':
         form = UserForm(request.POST)
         if form.is_valid():
             # create the user using the form
@@ -42,7 +45,10 @@ def registerUser(request):
     return render(request, 'accounts/registerUser.html', context)
 
 def registerVendor(request):
-    if request.method == 'POST':
+    if request.user.is_authenticated:
+        messages.warning(request, 'You are already logged in!')
+        return redirect('dashboard')
+    elif request.method == 'POST':
         # store the data and create the user
         form = UserForm(request.POST)
         v_form = VendorForm(request.POST, request.FILES)
@@ -77,7 +83,10 @@ def registerVendor(request):
     return render(request, 'accounts/registerVendor.html', context)
 
 def login(request):
-    if request.method == "POST":
+    if request.user.is_authenticated:
+        messages.warning(request, 'You are already logged in!')
+        return redirect('dashboard')
+    elif request.method == "POST":
         email = request.POST['email']
         password = request.POST['password']
 
