@@ -5,7 +5,7 @@ from vendor.forms import VendorForm
 from .forms import UserForm
 from .models import User, UserProfile
 from django.contrib import messages, auth
-from .utils import detectUser
+from .utils import detectUser, send_verification_email
 from django.contrib.auth.decorators import login_required, user_passes_test
 
 from django.core.exceptions import PermissionDenied
@@ -28,7 +28,7 @@ def check_role_customer(user):
 def registerUser(request):
     if request.user.is_authenticated:
         messages.warning(request, 'You are already logged in!')
-        return redirect('dashboard')
+        return redirect('custDashboard')
     elif request.method == 'POST':
         form = UserForm(request.POST)
         if form.is_valid():
@@ -48,6 +48,9 @@ def registerUser(request):
             user = User.objects.create_user(first_name=first_name, last_name=last_name, username=username, email=email, password=password)
             user.role = User.CUSTOMER
             user.save()
+
+            # Send verification email
+            send_verification_email(request, user)
             messages.success(request, 'Your account has been registered successfully')
             return redirect('registerUser')
         else:
@@ -63,7 +66,7 @@ def registerUser(request):
 def registerVendor(request):
     if request.user.is_authenticated:
         messages.warning(request, 'You are already logged in!')
-        return redirect('dashboard')
+        return redirect('myAccount')
     elif request.method == 'POST':
         # store the data and create the user
         form = UserForm(request.POST)
@@ -82,6 +85,10 @@ def registerVendor(request):
             user_profile = UserProfile.objects.get(user=user)
             vendor.user_profile = user_profile
             vendor.save()
+
+            # Send Verification Email
+            send_verification_email(request, user)
+
             messages.success(request, 'Your account has been registered successfully! Please wait for the approval.')
             return redirect('registerVendor')
         else:
@@ -97,6 +104,10 @@ def registerVendor(request):
     }
 
     return render(request, 'accounts/registerVendor.html', context)
+
+def activate(request, uidb64, token):
+    # Activate user by setting the is_active status to True
+    return
 
 def login(request):
     if request.user.is_authenticated:
